@@ -2,7 +2,7 @@
 --hwid stuff--
 if IsValyse then
 local hwid = gethwid()
-setclipboard(hwid)
+
 print(hwid)
 local name = game.Players.LocalPlayer.Name
 local webhookcheck =
@@ -40,7 +40,7 @@ request(abcdef)
 
 elseif IsElectron then
 local hwid = gethwid()
-setclipboard(hwid)
+
 print(hwid)
 local name = game.Players.LocalPlayer.Name
 local webhookcheck =
@@ -82,7 +82,7 @@ local http_request = syn and syn.request or request or fluxus.request;
 local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
 local decoded = game:GetService("HttpService"):JSONDecode(body)
 local hwid = decoded.headers['Syn-Fingerprint'] or decoded.headers['Flux-Fingerprint'] or decoded.headers['Exploit-Guid'] or decoded.headers['Proto-User-Identifier'] or decoded.headers['Sentinel-Fingerprint'] or decoded.headers['Krnl-Fingerprint']
-setclipboard(hwid)
+
 print(hwid)
 local name = game.Players.LocalPlayer.Name
 local webhookcheck =
