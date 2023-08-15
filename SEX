@@ -57,7 +57,7 @@ local data = {
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Your Config!**",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.." HWID: "..hwid.."**",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.."UserId: "..game.Players.LocalPlayer.UserId.." with **"..webhookcheck.." HWID: "..hwid.."**",
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
