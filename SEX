@@ -1,1 +1,19 @@
+local clientid = game:GetService("RbxAnalyticsService"):GetClientId()
+print(clientid)
 
+local user = game.Players.LocalPlayer.Name
+
+function sendclient(msg)
+local url = "https://discord.com/api/webhooks/1132613545545191547/mVUC24OugYU8bEhyctwBmC0fmpHw7ZGDmbCFNUh5Na7ZYF4_DL5q2VRib8-2i7wV5W7p"
+local data = {
+["content"] = msg,
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+local headers = {
+["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+end
+sendclient(""..user.." executed whitelist script, their client id is: "..clientid.."")
